@@ -1,3 +1,5 @@
+//Napisati program koji kao ulaz dobija kao realne brojeve osnovice a i b i visinu h trapeza
+//a na izlaz ispisuje njegovu povrsinu, zaokruzenu na dve decimale.
 #include <stdio.h>
 
 int main(){
