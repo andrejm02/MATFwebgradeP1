@@ -1,5 +1,5 @@
-\\Vozite automobil i ispred Vas brzinu vidite u km/h. 
-\\Napisati program koji za unetu celobrojnu vrednost brzine izrazene u km/h ispisuje brzinu u m/s, zaokruzeno na dve decimale.
+//Vozite automobil i ispred Vas brzinu vidite u km/h. 
+//Napisati program koji za unetu celobrojnu vrednost brzine izrazene u km/h ispisuje brzinu u m/s, zaokruzeno na dve decimale.
 #include <stdio.h>
 
 int main(){
