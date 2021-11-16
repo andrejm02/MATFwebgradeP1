@@ -11,3 +11,4 @@ int main(){
     c = e;
     printf("%d %d %d",a,b,c);
 }
+
