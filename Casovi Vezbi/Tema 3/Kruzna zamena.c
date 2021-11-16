@@ -1,5 +1,5 @@
-\\Napisati program koji vrsi 'kruznu zamenu' tri broja a, b i c, tako sto u a upisuje b, u b upisuje c a u c upisuje a.
-\\Ispisati nove vrednosti na izlaz. Program dobija brojeve a, b i c redom na svoj ulaz, a kao izlaz ispisuje nove brojeve a, b i c, takodje tim redom.
+//Napisati program koji vrsi 'kruznu zamenu' tri broja a, b i c, tako sto u a upisuje b, u b upisuje c a u c upisuje a.
+//Ispisati nove vrednosti na izlaz. Program dobija brojeve a, b i c redom na svoj ulaz, a kao izlaz ispisuje nove brojeve a, b i c, takodje tim redom.
 #include <stdio.h>
 
 int main(){
