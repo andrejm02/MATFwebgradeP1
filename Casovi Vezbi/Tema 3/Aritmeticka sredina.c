@@ -1,3 +1,4 @@
+\\Napisati program koji za dva uneta broja ispisuje njihovu aritmeticku sredinu (zaokruzenu na dve decimale).
 #include <stdio.h>
 
 int main(){   
