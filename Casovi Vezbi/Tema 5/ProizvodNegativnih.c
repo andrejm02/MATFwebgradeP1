@@ -5,13 +5,18 @@
 int main(){
     int a,b,c,d,broj = 1;
     scanf("%d %d %d %d",&a,&b,&c,&d);
+    
     if (a < 0)
         broj = broj * a;
+    
     if (b < 0)
         broj = broj * b;
+    
     if (c < 0)
         broj = broj * c;
+    
     if (d < 0)
         broj = broj *d;
+    
     printf("%d\n", broj);
 }
