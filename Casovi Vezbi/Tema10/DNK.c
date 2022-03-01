@@ -9,6 +9,7 @@
 void compare(char s[], char d[]){
     int br = 0;
     for(int i = 0; i < strlen(s); i++){
+        //Ukoliko se desi da ni jedan od ovih uslova u if naredbi nije ispunjen tada se brojac za mutacije uvecava
         if(!((s[i] == 'a' && d[i] == 't') || (s[i] == 't' && d[i] == 'a') || (s[i] == 'g' && d[i] == 'c') || (s[i] == 'c' && d[i] == 'g'))){
             br++;
         }
@@ -19,5 +20,6 @@ void compare(char s[], char d[]){
 int main(){
     char a[MAKS], b[MAKS];
     scanf("%s%s",a,b);
+    
     compare(a,b);
 }
