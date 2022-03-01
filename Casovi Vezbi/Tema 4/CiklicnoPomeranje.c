@@ -5,13 +5,13 @@
 
 int main()
 {
-    int broj, nbroj;
+    int broj, noviBroj;
     scanf("%d", &broj);
-    int jedinica, desetka, stotka, hiljadarka;
+    int jedinica, desetica, stotina, hiljadarka;
     jedinica = broj%10;
-    desetka = (broj/10)%10;
-    stotka = (broj/100)%10;
+    desetica = (broj/10)%10;
+    stotina = (broj/100)%10;
     hiljadarka = broj/1000;
-    nbroj = jedinica * 1000 + desetka * 1 + stotka * 10 + hiljadarka * 100;
-    printf("%d", nbroj);
+    noviBroj = jedinica * 1000 + desetica * 1 + stotina * 10 + hiljadarka * 100;
+    printf("%d", noviBroj);
 }
