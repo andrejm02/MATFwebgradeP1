@@ -5,28 +5,31 @@
 #include <stdio.h>
 
 int main(){
-    int x,i;
-    float b;
-    scanf("%d", &x);
-    int n[x];
-    if(x <= 0 || x > 100){
+    int n,i;
+    float movingAverage;
+    scanf("%d", &n);
+    int x[n];
+    
+    if(n <= 0 || n > 100){
         puts("-1");
         return 1;
     }
-    for(i = 0; i < x; i++)
-        scanf("%d", &n[i]);
-    if(x == 1){
-        b = n[0];
-        printf("%.2f", b);
+    for(i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+    
+    if(n == 1){
+        movingAverage = x[0];
+        printf("%.2f", movingAverage);
         return 1;
     }
-    for(i = 0; i < x; i++){
+    for(i = 0; i < n; i++){
+        //slucajeve (i == 0) i (i == n-1) razlikujemo zbog uslova u zadatku koji kaze da je nulti element susedan poslednjem
         if(i == 0)
-            b = (n[i] + n[i+1] + n[x-1])/3.0;
-        else if(i == x-1)
-            b = (n[i] + n[i-1] + n[0])/3.0;
+            movingAverage = (x[i] + x[i+1] + x[n-1])/3.0;
+        else if(i == n-1)
+            movingAverage = (x[i] + x[i-1] + x[0])/3.0;
         else
-            b = (n[i] + n[i-1] + n[i+1])/3.0;
-        printf("%.2f ", b);
+            movingAverage = (x[i] + x[i-1] + x[i+1])/3.0;
+        printf("%.2f ", movingAverage);
     }
 }
