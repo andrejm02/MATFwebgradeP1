@@ -2,19 +2,18 @@
 //Prva dva elementa su 0 i 1, a svaki sledeci dobija se sabiranjem prethodna dva. U slucaju neispravnih ulaznih podataka ispisati -1.
 #include <stdio.h>
 
-int main()
-{
-    int p = 0, s = 0, n = 1, x, i;
-    scanf("%d", &x);
-    if(x <= 0)
-    {
+int main(){
+    int n, p = 0, s = 0, x = 1;
+    scanf("%d", &n);
+    
+    if(n <= 0){
         puts("-1");
         return 1;
     }
-    for(i = 0; i < x; i++){
+    for(int i = 0; i < n; i++){
         printf("%d ", s);
         p = s;
-        s = n;
-        n = p +s;       
+        s = x;
+        x = p + s;       
     }
 }
