@@ -4,16 +4,15 @@
 #include <math.h>
 
 int main(){
-    int broj = 0, n, x, m, i = 0;
+    int broj = 0, n, m;
     scanf("%d %d", &m, &n);
-    x = n;
+    
     if (n < 0){
         puts("-1");
         return 1;
     }
-    while (i < n+1){
+    for(int i = 0; i <= n; i++)
         broj += (int)pow(m, i);
-        i++;
-    }
+    
     printf("%d", broj);
 }
