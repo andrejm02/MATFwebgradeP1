@@ -5,12 +5,12 @@
 int konverzija(char x){
     int n = x;
     printf("%d", n%10);
-    return 0;
 }
 
 int main(){
     char x;
     while(scanf("%c", &x) != EOF)
         konverzija(x);
+    
     return 0;
 }
