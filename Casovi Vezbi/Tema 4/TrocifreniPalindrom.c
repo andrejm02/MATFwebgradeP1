@@ -5,15 +5,14 @@
 
 int main()
 {
-int broj, b;
+int broj;
     scanf("%d", &broj);
     int jedinica, desetka, stotka, nbroj;
     jedinica = broj%10;
     desetka = (broj/10)%10;
     stotka = (broj/100)%10;
     if (jedinica == stotka)
-        b = 1;
+        printf("1\n");
     else
-        b = 0;
-    printf("%d\n", b);
+        printf("0\n");
 }
