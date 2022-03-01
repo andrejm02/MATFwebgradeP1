@@ -4,10 +4,12 @@
 #include <math.h>
 
 int main(){
-    long x;
-    scanf("%ld", &x);
-    long levo = x/(long)pow(10,3);
-    long desno = x % (long)pow(10,2);
-    long novo = levo * (long)pow(10, 2) + desno;
-    printf("%ld", novo);
+    long broj;
+    scanf("%ld", &broj);
+    
+    long levo = broj/(long)pow(10,3);
+    long desno = broj % (long)pow(10,2);
+    long noviBroj = levo * (long)pow(10, 2) + desno;
+    
+    printf("%ld", noviBroj);
 }
