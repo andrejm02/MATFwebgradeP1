@@ -7,16 +7,16 @@ int main(){
     scanf("%d %d %d %d",&a,&b,&c,&d);
     
     if (a < 0)
-        broj = broj * a;
+        broj *= a;
     
     if (b < 0)
-        broj = broj * b;
+        broj *= b;
     
     if (c < 0)
-        broj = broj * c;
+        broj *= c;
     
     if (d < 0)
-        broj = broj *d;
+        broj *= d;
     
     printf("%d\n", broj);
 }
