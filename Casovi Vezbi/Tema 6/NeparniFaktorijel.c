@@ -4,9 +4,10 @@
 #include <stdio.h>
 
 int main(){
-    int n, m, i = 0, broj = 1;
+    int n, m, broj = 1;
     scanf("%d", &n);
-    m = n;   
+    m = n;
+    
     if(n<=0){
         puts("-1");
         return 1;
@@ -17,8 +18,7 @@ int main(){
             m -= 2;
             n -= 2;
         }        
-    }
-    if (n%2 == 1){
+    }else{
         while (m >= 1){
             broj = n*broj;
             m -= 2;
