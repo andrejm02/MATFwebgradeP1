@@ -9,13 +9,17 @@ int main(){
     while((c = getchar()) && c != EOF && c !='\n'){
         if(c == '[')
             br++;
-        if(c == ']'){
+        if(c == ']')
             br--;
-            if(br<0){
-                puts("0");
-                return 0;
-            }
+        
+        if(br<0){
+            puts("0");
+            return 0;
         }
     }
-    puts((br == 0)? "1": "0");
+    if(br == 0){
+        puts("1");
+    }else{
+        puts("0");
+    }
 }
