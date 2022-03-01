@@ -4,18 +4,18 @@
 
 int main()
 {
-    int a,i = 1;
-    double sr;
-    scanf("%d", &a);
-    if (a<= 0){
+    int n;
+    double sredina;
+    scanf("%d", &n);
+    
+    if (n <= 0){
         puts("-1");
         return 1;
     }
-    while (i <= a){
+    for(int i = 1;i <= n; i++){
         int broj = 0;
         broj += i;
-        sr += 1.0/broj;
-        i++;
+        sredina += 1.0/broj;
     }
-    printf("%.6lf\n", a/sr);
+    printf("%.6lf\n", n/sredina);
 }
