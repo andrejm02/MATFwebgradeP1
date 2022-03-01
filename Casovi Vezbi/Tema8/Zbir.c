@@ -23,5 +23,7 @@ int main(){
     int x;
     scanf("%d", &x);
     x = abs(x);
+    
     zbir(x);
+    return 0;
 }
