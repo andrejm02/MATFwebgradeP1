@@ -6,44 +6,47 @@
 
 int main()
 {
-    int x,e = 0;
-    scanf("%d", &x);
-    if(x < 0){
-        e = 1;
+    int broj,znak = 0;
+    scanf("%d", &broj);
+    //Odredjivanje znaka originalnog broja
+    if(broj < 0){
+        znak = 1;
     }
-    x = abs(x);
-    if (x < 1000 || x > 9999) {
+    broj = abs(broj);
+    if (broj < 1000 || broj > 9999) {
         puts("-1");
         return 1;
     }
     int j,d,s,h;
-    j = x%10;
-    d = (x/10)%10;
-    s = (x/100)%10;
-    h = x/1000;
-    int nbroj = x;
-    int poz_max = 1;
-    if (x > 0){
-        int max = j;
+    j = broj%10;
+    d = (broj/10)%10;
+    s = (broj/100)%10;
+    h = broj/1000;
+    int noviBroj = broj;
+    int max = j;
+    int pozMax = 1;
+    
+    if (broj > 0){
         if (max < d){
             max = d;
-            poz_max = 10;            
+            pozMax = 10;            
         }
         if (max < s){
             max = s;
-            poz_max = 100;           
+            pozMax = 100;           
         }
         if (max <h){
             max = h;
-            poz_max = 1000;            
+            pozMax = 1000;            
         }
-        nbroj = nbroj - abs(max)*poz_max + (abs(max)-1)*poz_max;
-        if(e == 1){
-            printf("%d\n", -nbroj);
+        noviBroj = noviBroj - max*pozMax + (max-1)*pozMax;
+        
+        if(znak == 1){
+            printf("%d\n", -noviBroj);
             return 0;
         }
         else{
-            printf("%d\n", nbroj);
+            printf("%d\n", noviBroj);
             return 0;
         }
     }
