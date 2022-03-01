@@ -7,24 +7,29 @@
 int main(){
     int broj,j,d,s,h,brojac = 0;
     scanf("%d", &broj);
+    
     broj = abs(broj);
     j = broj%10;
     d = (broj/10)%10;
     s = (broj/100)%10;
     h = broj/1000;
-    if (broj <= 1000 || broj >= 9999) {
+    
+    if (broj <= 1000 || broj >= 9999){
         puts("-1");
         return 1;
-    }
-    else {
+    }else{
         if (j%2 == 0)
             brojac++;
+        
         if(d%2 == 1)
             brojac++;
+        
         if(s%2 == 0)
             brojac++;
+        
         if(h%2 == 1)
             brojac++;
+        
         printf("%d\n", brojac); 
     }
 }
