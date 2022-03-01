@@ -4,17 +4,19 @@
 #include <stdio.h>
 
 int main(){
-    int x, sum = 0;
-    scanf("%d", &x);
-    int n[x];
-    if(x > 100 || x <= 0){
+    int n, sum = 0;
+    scanf("%d", &n);
+    int x[n];
+    
+    if(n > 100 || n <= 0){
         puts("-1");
         return 1;
     }
-    for(int i = 0; i < x; i++)
-        scanf("%d", &n[i]);
-    for(int i = 0; i < x; i++){
-        sum += n[i];
+    for(int i = 0; i < n; i++)
+        scanf("%d", &x[i]);
+    
+    for(int i = 0; i < n; i++){
+        sum += x[i];
         printf("%d ", sum);
     }
 }
