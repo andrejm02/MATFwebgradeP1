@@ -11,36 +11,29 @@
 int main(){
     int k,l,m,n;
     scanf("%d %d %d %d", &k,&l,&m,&n);
-    int raz1 = k - m;
-    int raz2 = l-n;
-    if (k < 1 || k > 8 || l < 1 || l > 8 || m < 1 || m > 8 || n < 1 || n > 8){
+    int razlika1 = k - m;
+    int razlika2 = l-n;
+    
+    if ((k == m && l == n) || k < 1 || k > 8 || l < 1 || l > 8 || m < 1 || m > 8 || n < 1 || n > 8){
         puts("-1");
         return 1;
     }
-    if (k == m && l == n){
-        puts("-1");
-        return 1;
-    }
-    if (k%2 == m%2){
-        if(l%2 == n%2){
-            printf("Polja su iste boje.\n");
-        }
-        else
-            printf("Polja su razlicite boje.\n");
-    }
+    
+    //Provera boja polja
+    if ((k%2 == m%2) && (l%2 == n%2))
+        printf("Polja su iste boje.\n");     
+    else if(!(k%2 == m%2) && !(l%2 == n%2))
+        printf("Polja su iste boje.\n");    
     else
-        if(l%2 == n%2)
-            printf("Polja su razlicite boje.\n");
-        else
-            printf("Polja su iste boje.\n");
-    if (k == m)
+        printf("Polja su razlicite boje.\n");
+    
+    //Provera za kraljicu
+    if ((k == m) || (l == n) || (abs(razlika1) == abs(razlika2)))
         printf("Kraljica sa (%d,%d) ugrozava polje (%d,%d).\n", k,l,m,n);
-    else if (l == n)
-        printf("Kraljica sa (%d,%d) ugrozava polje (%d,%d).\n",k,l,m,n);
-        else if (abs(raz1) == abs(raz2))
-            printf("Kraljica sa (%d,%d) ugrozava polje (%d,%d).\n",k,l,m,n);
-            else
-                printf("Kraljica sa (%d,%d) ne ugrozava polje (%d,%d).\n",k,l,m,n);
+    else
+        printf("Kraljica sa (%d,%d) ne ugrozava polje (%d,%d).\n",k,l,m,n);
+    
+    //Provera za konja
     if (k == m+1 && l == n+2 || k == m-1 && l == n+2 || k == m+1 && l == n-2 || k == m-1 && l == n-2 || k == m+2 && l == n+1 || k == m-2 && l == n+1 || k == m+2 && l == n-1 || k == m-2 && l == n-1)
         printf("Konj sa (%d,%d) ugrozava polje (%d,%d).\n",k,l,m,n);
     else
