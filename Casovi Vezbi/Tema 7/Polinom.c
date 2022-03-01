@@ -7,6 +7,7 @@ int main(){
     int m,n;
     double broj, sum = 0, fakt = 1;
     scanf("%d %d", &m, &n);
+    
     if(n < 0){
         puts("-1");
         return 1;
