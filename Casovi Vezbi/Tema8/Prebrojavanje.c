@@ -7,12 +7,13 @@ int prebrojavanje(int x){
     while(scanf("%d", &n) != EOF)
         if(x > n)
             br++;
+    
     printf("%d",br);
-    return 0;
 }
 
 int main(){
     int x;
     scanf("%d", &x);
     prebrojavanje(x);
+    return 0;
 }
