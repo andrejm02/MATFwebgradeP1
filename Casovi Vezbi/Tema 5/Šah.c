@@ -34,7 +34,7 @@ int main(){
         printf("Kraljica sa (%d,%d) ne ugrozava polje (%d,%d).\n",k,l,m,n);
     
     //Provera za konja
-    if (k == m+1 && l == n+2 || k == m-1 && l == n+2 || k == m+1 && l == n-2 || k == m-1 && l == n-2 || k == m+2 && l == n+1 || k == m-2 && l == n+1 || k == m+2 && l == n-1 || k == m-2 && l == n-1)
+    if (abs(k-m) == 1 && abs(l - n) == 2 || abs(k-m) == 2 && abs(l - n) == 1)
         printf("Konj sa (%d,%d) ugrozava polje (%d,%d).\n",k,l,m,n);
     else
         printf("Konj sa (%d,%d) ne ugrozava polje (%d,%d).\n",k,l,m,n);
